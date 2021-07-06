@@ -14,8 +14,12 @@
 
 h1 {
   color: azure;
-  
+  border: 2px dotted white;
+  margin: 1em auto;
+  width: 35%;
 }
+  
+
 
 body {
   font-family: georgia;
