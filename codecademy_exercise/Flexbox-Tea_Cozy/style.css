@@ -103,16 +103,18 @@ hr {
 
 .location .address {
   width: 25%;
-  height: 300px;
+  max-height: 300px;
   background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-left: 20px;
   margin-right: 20px;
   
 }
+
+
 
 .address .lighter {
   font-weight: lighter;
