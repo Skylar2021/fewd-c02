@@ -1,0 +1,142 @@
+
+html {
+  font-size: 22px;
+  font-family: Helvetica;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+ height: 69px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
+  border-bottom: 1px solid seashell ;
+  }
+
+header img {
+  height: 50px;
+  width: auto;
+  justify-content: flex-start;
+  left: 10px;
+}
+
+nav {
+  justify-content: flex-end;
+}
+
+section.banner {
+  top: 69px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 750px;
+}
+
+section.banner img {
+  height: 700px;
+  width: 1200px;
+  margin-top: 80px;
+  
+}
+
+.figcaption {
+  width: 1200px;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+  position: relative;
+  top: -400px;
+  
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+.img-title {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.img-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.img-flex-container img {
+  width: 300px;
+  height:200px;
+  ;
+}
+
+.address-flexbox {
+  display: inline-flex;
+  flex-direction: column;
+  background-image: url(https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg);
+  background-size: cover;
+  height: 500px;
+  width: 1200px;
+  justify-content: center;
+}
+
+h3.location-title {
+  color: seashell;
+  display: block;  
+  margin-bottom: 15px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location .address {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+}
+
+.address h3 {
+  align-items: center;
+}
+
+.address .lighter {
+  font-weight: lighter;
+}
+
+footer .contact {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+
+footer .align-left {
+  text-align: left;
+
+}
