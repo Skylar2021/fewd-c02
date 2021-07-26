@@ -13,7 +13,7 @@ secretMessage[7] = 'right';
 secretMessage.shift()
 // add element to the begining
 secretMessage.unshift('Programming')
-// remove index 6-10 and add know
-secretMessage.splice(6, 5, 'know')
+// remove index 6-10 and add 'know, '
+secretMessage.splice(6, 5, 'know,')
 // to print the array as a sentence and check the result
 console.log(secretMessage.join(' '))
