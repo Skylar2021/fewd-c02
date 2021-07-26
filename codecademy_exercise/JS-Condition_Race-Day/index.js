@@ -21,7 +21,7 @@ if (earlyRunner && runnerAge > 18) {
   console.log('For runner who is exactly 18 years old, please approach the registration desk.')
 }
 
-/* 
+/* sir demo
 // switch-case approach
 switch ( (age < 18) ? 'child': 'adult' ) {
   case 'child':
