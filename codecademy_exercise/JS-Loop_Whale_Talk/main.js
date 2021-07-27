@@ -12,21 +12,19 @@ for (i = 0; i < input.length; i++){
       resultArray.push(input[i])
   }
 }
-console.log((resultArray.join('')).toUpperCase() + '!')
+console.log(resultArray.join('').toUpperCase() + '!')
 
-// try other phrase
-let input1 = 'a whale of a deal!';
+// alternative
 
-let resultArray1 = [];
-for (i = 0; i < input1.length; i++){
-  // console.log('i = ' + i); 
-  for (j = 0; j < vowels.length; j++) {
-    if (input1[i] === vowels[j]) {
-      resultArray1.push(input1[i])
-    }     
-  }
-  if (input1[i] === 'u' || input1[i] === 'e') {
-      resultArray1.push(input1[i])
-  }
-}
-console.log((resultArray1.join('')).toUpperCase() + '!')
+resultArray =input.split('')
+                  .filter(item => vowels
+                  .includes(item))
+                  .map(item => item === 'u' || item === 'e' ? item + item : item)
+                  .join('')
+                  .toUpperCase()
+
+console.log(resultArray + '!')
+
+
+
+
