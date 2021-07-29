@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link href="src/css/family.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+    </head>
+
+    <body>
+        <!---- navbar ---->
+        <header class="top-bar">
+            <div class="top-left-bar">
+                <div class="dropdown">
+                    <button class="dropbtn"><i id='top-left-img1' class="fas fa-bars"></i>  </button>
+                    <div class="dropdown-content">
+                        <a href="./index.html" class="dropdown-content-itm">Today</a>
+                        <a href="./next7days.html" class="dropdown-content-itm">Next 7 Days</a>
+                        <a href="./work.html" class="dropdown-content-itm">Work</a>
+                        <a href="./family.html" class="dropdown-content-itm">Family</a>
+                        <a href="./personal.html" class="dropdown-content-itm">Personal</a>
+                        <a href="./calendar.html" class="dropdown-content-itm">Calendar</a>
+                    </div>
+                </div>   
+            </div>
+            <div class="top-right-bar">
+                <form class="top-right-bar-search">
+                    <input type="search" placeholder="   Search">
+                    <button type="submit">Search</button>
+                        
+                </form>
+                <div class="top-right-bar2">
+                    <a class="top-right-bar2-items" href="./add_new.html"><h4>Addnews</h4></a>
+                    <a class="top-right-bar2-items" href="#"><h4>Alarms</h4></a>
+                    <a class="top-right-bar2-items" href="#"><h4>Setting</h4></a>
+                    
+                </div>
+            </div>
+            <div class="mobile-top-right-bar1">
+                <i id="top-right-img1" class="fas fa-search "></i>
+                <i id="top-right-img2" class="far fa-bell"></i>
+                <i id="top-right-img3" class="fas fa-cog"></i>
+            </div>
+            <div class="mobile-top-right-bar2">
+                <a href="./add_new.html">
+                    <i id="top-right-img4" class="fas fa-plus"></i>
+                </a>
+            </div>
+        </header>
+
+        <!---- end of navbar ---->
+
+        <div class="main-middle">
+            <!---- main-middle-left ---->
+            <div class="main-middle-left">
+                <ul class="main-middle-left-list">
+                    <li class="main-middle-left-list-column">
+                        <a href="./index.html">Today</a>
+                    </li>
+                    <li class="main-middle-left-list-column">
+                        <a href="./next7days.html">Next 7 Days</a>
+                    </li>         
+
+                </ul>
+                <hr>
+                <ul class="main-middle-left-list">
+                    <li class="main-middle-left-list-column">
+                        <a href="./work.html">Work</a>
+                    </li>
+                    <li class="main-middle-left-list-column">
+                        <a href="./Family.html">Family</a>
+                    </li>
+                    <li class="main-middle-left-list-column">
+                        <a href="./personal.html">Personal</a>
+                    </li>                
+                    <li class="main-middle-left-list-column">
+                        <a href="./calendar.html">Calendar</a>
+                    </li>                
+
+                </ul>
+                <div class="calender">
+                    <input type="date" id="calender-date">
+                </div>
+            </div>
+            <!---- main-middle-right ---->
+            <div class="main-middle-right">
+                <div class="main-middle-right-content">
+                    <div class="main-middle-right-title">
+                        <h1>Family</h1>
+                    </div>               
+                
+                    <div class="todo-card">
+                        <div class="todo-cardtype">
+                            <h4>Family</h4>
+                        </div>
+                        <div class="todo-card-namedue">
+                            <h5>Task Name: Task</h5>
+                            <h5>Due:Thu 07 Dec 2021</h5>
+                        </div>                       
+                        <div class="todo-card-content">
+                            <h4 class="font-change">Description :</h4>
+                            <h4 class="font-change">Lorem ipsum dolor sit amet, consectetur adipiscing elit,esd do eiusmod tempor incididunt ut</h4>
+                            <h4 class="font-change">Assigned To : Mr.Abc</h4>
+                            <h4 class="font-change">Status :</h4>
+
+                        </div>
+                        <div class="todo-card-lower-funtion">
+                            <div class="todo-card-lower-function-left">
+                                <input type="checkbox"><label>Complete</label>
+                            </div>
+                            <div class="todo-card-lower-funtion-right">
+                                <i id="tclfr1" class="far fa-trash-alt"></i>
+                                <i id="tclfr2" class="far fa-bell"></i>
+                                <i id="tclfr3" class="far fa-flag"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="todo-card">
+                        <div class="todo-cardtype">
+                            <h4>Family</h4>
+                        </div>
+                        <div class="todo-card-namedue">
+                            <h5>Task Name: Task</h5>
+                            <h5>Due:Thu 17 Dec 2021</h5>
+                        </div>                       
+                        <div class="todo-card-content">
+                            <h4 class="font-change">Description :</h4>
+                            <h4 class="font-change">Lorem ipsum dolor sit amet, consectetur adipiscing elit,esd do eiusmod tempor incididunt ut</h4>
+                            <h4 class="font-change">Assigned To : Mr.Def</h4>
+                            <h4 class="font-change">Status :</h4>
+
+                        </div>
+                        <div class="todo-card-lower-funtion">
+                            <div class="todo-card-lower-function-left">
+                                <input type="checkbox"><label>Complete</label>
+                            </div>
+                            <div class="todo-card-lower-funtion-right">
+                                <i id="tclfr1" class="far fa-trash-alt"></i>
+                                <i id="tclfr2" class="far fa-bell"></i>
+                                <i id="tclfr3" class="far fa-flag"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                        <div class="todo-card">
+                            <div class="todo-cardtype">
+                                <h4>Family</h4>
+                            </div>
+                            <div class="todo-card-namedue">
+                                <h5>Task Name: Task</h5>
+                                <h5>Due:Thu 27 Dec 2021</h5>
+                            </div>                       
+                            <div class="todo-card-content">
+                                <h4 class="font-change">Description :</h4>
+                                <h4 class="font-change">Lorem ipsum dolor sit amet, consectetur adipiscing elit,esd do eiusmod tempor incididunt ut</h4>
+                                <h4 class="font-change">Assigned To : Mr.Zxy</h4>
+                                <h4 class="font-change">Status :</h4>
+
+                            </div>
+                            <div class="todo-card-lower-funtion">
+                                <div class="todo-card-lower-function-left">
+                                    <input type="checkbox"><label>Complete</label>
+                                </div>
+                                <div class="todo-card-lower-funtion-right">
+                                    <i id="tclfr1" class="far fa-trash-alt"></i>
+                                    <i id="tclfr2" class="far fa-bell"></i>
+                                    <i id="tclfr3" class="far fa-flag flag3"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    
+                    
+
+
+
+
+
+
+
+
+
+
+                    
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </body>
+
+</html>

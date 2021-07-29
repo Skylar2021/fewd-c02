@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link href="src/css/add_new.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add New</title>
+    </head>
+
+    <body>
+        <!---- navbar ---->
+        <header class="top-bar">
+            <div class="top-left-bar">
+                <i id='top-left-img1' class="fas fa-bars"></i>          
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><i id='top-left-img1' class="fas fa-bars"></i>   </button>
+                <div class="dropdown-content">
+                    <a href="./index.html" class="dropdown-content-itm">Today</a>
+                    <a href="./next7days.html" class="dropdown-content-itm">Next 7 Days</a>
+                    <a href="./work.html" class="dropdown-content-itm">Work</a>
+                    <a href="./family.html" class="dropdown-content-itm">Family</a>
+                    <a href="#" class="dropdown-content-itm">Personal</a>
+                    <a href="./calendar.html" class="dropdown-content-itm">Calendar</a>
+                </div>
+            </div>
+            <div class="top-right-bar">
+                <form class="top-right-bar-search">
+                    <input type="search" placeholder="   Search">
+                    <button type="submit">Search</button>
+                        
+                </form>
+                <div class="top-right-bar2">
+                    <a class="top-right-bar2-items" href="./add_new.html"><h4>Addnews</h4></a>
+                    <a class="top-right-bar2-items"><h4>Alarms</h4></a>
+                    <a class="top-right-bar2-items"><h4>Setting</h4></a>
+                    
+                </div>
+            </div>
+            <div class="mobile-top-right-bar1">
+                <i id="top-right-img1" class="fas fa-search "></i>
+                <i id="top-right-img2" class="far fa-bell"></i>
+                <i id="top-right-img3" class="fas fa-cog"></i>
+            </div>
+            <div class="mobile-top-right-bar2">
+                <a href="./add_new.html">
+                    <i id="top-right-img4" class="fas fa-plus"></i>
+                </a>
+            </div>
+        </header>
+
+        <!---- end of navbar ---->
+
+        <div class="main-middle">
+            <!---- main-middle-left ---->
+            <div class="main-middle-left">
+                <ul class="main-middle-left-list">
+                    <li class="main-middle-left-list-column">
+                        <a href="./index.html">Today</a>
+                    </li>
+                    <li class="main-middle-left-list-column">
+                        <a href="./next7days.html">Next 7 Days</a>
+                    </li>  
+
+                </ul>
+                <hr>
+                <ul class="main-middle-left-list">
+                    <li class="main-middle-left-list-column">
+                        <a href="./work.html">Work</a>
+                    </li>
+                    <li class="main-middle-left-list-column">
+                        <a href="./Family.html">Family</a>
+                    </li>
+                    <li class="main-middle-left-list-column">
+                        <a href="./personal.html">Personal</a>
+                    </li>                
+                    <li class="main-middle-left-list-column">
+                        <a href="./calendar.html">Calendar</a>
+                    </li>                
+
+                </ul>
+                <div class="calender">
+                    <input type="date" id="calender-date">
+                </div>
+            </div>
+        
+            <!---- main-middle-right ---->
+            <div class="main-middle-right">
+                <div class="add-new-middle-right">
+                    <div class="add-new-middle-right-content font-change">
+                        <div class="add-new-middle-right-title">
+                            <h3 class="">Add New</h3>
+                        </div>
+                        <div class="add-new-card-namedue">
+
+                            <div class="task-name font-change">
+                                <label class="font-change"for="tname">Task Name:</label>
+                                <input type="text" id="tname" name="tname" placeholder="Task Name">
+                            </div>
+                            <br>
+                        </div>
+                        <div class="type">
+                            <lable for="type">Type:</lable>
+
+                            <select id="type">
+                                <option value="business">Business</option>
+                                <option value="faimly">Faimly</option>
+                                <option value="personal">Personal</option>
+                            </select>
+                            <br><br>
+                        </div>
+                        <div class="start-end-date">
+                            <form id="date">
+                                <label>
+                                    <span class="font-change">Start Date</span>
+                                    <input type="date" name="start" value="Today"/>
+                                </label>
+                                <br> <br>            
+                                <label class="Start Date font-change">
+                                    <span>End Date</span> 
+                                    <input type="date" name="end" data-value="7" value="After one week"/>
+                                </label>       
+                            </form>
+                            <br>
+                        </div>
+                        <div class="description" >
+                            <label class="font-change" for="description">Task Description</label>
+                            <input type="text" id="tname" name="tname" placeholder="NAMES"><br><br>
+                        </div>
+                        <div class="status">
+                            <lable for="type">Status</lable>
+
+                            <select id="type">
+                            <option value="planing">Planing</option>
+                            <option value="in-progress">In progress</option>
+                            <option value="done">Done</option>
+                            </select>
+                            <br><br>
+                        </div>
+                        <div class="importance">
+                            
+                            <label class="font-change" for="importance-level">Importance</label>
+                            <br>
+                            <span>Trivial</span>
+                            <input type="range" name="importance" id="importance" value="3" min="1" max="5">
+                            <span>Critical</span>
+                            
+                            <br>
+                            <br>
+                        </div>
+                        <div class="assigned">
+                            <label class="font-change" for="assigned">Assigned to</label>
+                            <input type="text" id="tname" name="tname" placeholder="Assigned to">
+                            <br><br>
+                        </div>                            
+                        <div class="new-add-card-lower-funtion">
+                            <div class="new-add-card-lower-funtion-right">
+                                <button type="button">Comfirm</button>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

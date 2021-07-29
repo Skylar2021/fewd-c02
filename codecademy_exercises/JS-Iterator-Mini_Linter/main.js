@@ -24,6 +24,9 @@ for (i = 0; i < overusedWords.length ; i++ ) {
 console.log('overused words count: ' +overusedWordsCount)
 
 // count how many sentences are in the paragraph
+// refector this task with .reduce()
+
+
 let sentenceCount = 0;
 for (j = 0; j < betterWords.length; j++) {
   if (betterWords[j].endsWith('.') || betterWords[j].endsWith('!')) {
