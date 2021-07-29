@@ -1,0 +1,42 @@
+body {
+  font-size: 100px;
+}
+
+
+
+h1 {
+  text-align: center;
+  color: red;
+  padding: 50px;
+}
+
+.container .row {
+  
+}
+
+.row .col {
+  justify-content: space-between;
+  border: 1px dotted teal;
+}
+
+.carousel-item img {
+  height: auto;
+  width: 600px;
+}
+
+.product {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.btn {
+  margin-left: 10px;
+  
+}
+
+#navbar-text {
+  color: blanchedalmond;
+  font-weight: bolder;
+}
+
