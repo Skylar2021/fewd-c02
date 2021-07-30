@@ -15,7 +15,7 @@ delete robbie.name; // we try to delete the name
 console.log('Robot\'s name: ' + robbie.getName() + ' stays private.'); // yet .name is inaccessible from the outside
 
 
-let obj = (function () {  // clos
+let obj = (function () {  // closure
   // block scope(privacy, can't be accessed from the outside)
   return {
     // global scope
