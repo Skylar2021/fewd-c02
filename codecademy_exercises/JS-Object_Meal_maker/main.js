@@ -50,7 +50,7 @@ const menu = {
     let main = this.getRandomDishFromCourse('mains') 
     let dessert = this.getRandomDishFromCourse('desserts') 
     let totalPrice = dessert['price'] + main.price + appetizer.price
-    console.log(`Appetizer: ${appetizer.name},\nMain: ${main.name},\nDessert: ${dessert.name},\nTotale cost: $${totalPrice}`)
+    return (`Appetizer: ${appetizer.name},\nMain: ${main.name},\nDessert: ${dessert.name},\nTotale cost: $${totalPrice}`)
   },
 }
 
@@ -71,5 +71,6 @@ menu.addDishToCourse('mains', 'lamp steak', 65)
 menu.addDishToCourse('mains', 'pork chop', 55)
 menu.addDishToCourse('mains', 'plantbase', 60)
 
-menu.generateRandomMeal()
+let meal = menu.generateRandomMeal()
+console.log(meal)
 
