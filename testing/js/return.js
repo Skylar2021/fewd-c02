@@ -8,7 +8,7 @@ function cal(width, height) {
 }
 cal(5, 6)
 
-// with return
+// with return, the code after return won't be execute
 function cal(width, height) {
   return (width * height)
 }

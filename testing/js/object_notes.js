@@ -1,4 +1,4 @@
-
+// Notes: getter, setter, Factory Function and object destructuring
 
 const person = {
   firstName: 'Wong',
