@@ -1,5 +1,5 @@
 //  randomly create a three-course meal based on what is available on a menu. 
-
+"use strict"
 const menu = {
   _course: {
     appetizers:[] ,
