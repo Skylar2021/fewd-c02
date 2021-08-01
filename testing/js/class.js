@@ -1,6 +1,6 @@
 "use strict";
 class Family {
-  constructor (name, num, gender) { //allow new instance to inherit from the constructor under class
+  constructor (name, num, gender) { // allow new instance to inherit from the constructor under class
     this._name = name;              // inside constructor, property can be set, so that the new instance have similar key but different value
     this._sequence = num;
     this._gender = gender
