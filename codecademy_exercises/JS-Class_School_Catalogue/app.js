@@ -83,17 +83,33 @@ lorraineHansbury.addTestScores(74)
 lorraineHansbury.addTestScores(68)
 lorraineHansbury.calAverageTestScores()
 lorraineHansbury.schoolOverview = 'B'
-console.log(lorraineHansbury)
+// console.log(lorraineHansbury)
+
+const hailey = new PrimarySchool('Hailey', 475, 'Students must be picked up by a person who has a pick-up card which issues by the Hailey Primary School.')
+hailey.addTestScores(64)
+hailey.addTestScores(78)
+hailey.addTestScores(91)
+hailey.calAverageTestScores()
+hailey.schoolOverview = 'A-'
+// console.log(hailey)
 
 School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli'])
 
 const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field'])
 alSmith.addTestScores(60)
-alSmith.addTestScores(89)
+alSmith.addTestScores(59)
 alSmith.addTestScores(77)
 alSmith.calAverageTestScores()
-alSmith.schoolOverview = 'A-'
-console.log(alSmith)
+alSmith.schoolOverview = 'B+'
+// console.log(alSmith)
+
+const stJohn = new HighSchool('St. John Medical School', 255, ['Frist Aid', 'VWB', 'Long Run', 'Ambulance'])
+stJohn.addTestScores(90)
+stJohn.addTestScores(86)
+stJohn.addTestScores(77)
+stJohn.calAverageTestScores()
+stJohn.schoolOverview = 'A'
+// console.log(stJohn)
 
 const holy = new MiddleSchool('St. Holy', 250)
 holy.addTestScores(55)
@@ -101,4 +117,27 @@ holy.addTestScores(66)
 holy.addTestScores(77)
 holy.calAverageTestScores()
 holy.schoolOverview = 'B'
-console.log(holy)
+// console.log(holy)
+
+class SchoolCatalogue {
+  constructor(type){
+    this._schoolType = type === 'high' || type === 'primary' ? type : console.log('Please input high or primary.');
+    this._catalogue = []
+  }
+  get catalogue(){
+    return this._catalogue
+  }
+  addCatalogue(school){
+    this._catalogue.push(school)
+  }
+}
+
+const priCatalogue = new SchoolCatalogue('primary')
+priCatalogue.addCatalogue(lorraineHansbury)
+priCatalogue.addCatalogue(hailey)
+console.log(priCatalogue)
+
+const highCatalogue = new SchoolCatalogue('high')
+highCatalogue.addCatalogue(alSmith)
+highCatalogue.addCatalogue(stJohn)
+console.log(highCatalogue)
