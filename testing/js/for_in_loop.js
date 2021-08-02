@@ -1,10 +1,14 @@
-// for in loop
+// for in loop in object
 // iterates a specified variable over all the enumerable properties of an object
-const toDoList = {
-  'name':'Amy',
+toDoList =  {
+  name:'Amy',
   'assigned to':'Tom',
-  'monitor':'Jerry'}
+  monitor:'Jerry'}
 
-for (let item in toDoList) {
-  console.log(item)
+for (item in toDoList) {
+  console.log(toDoList.item)
 }
+console.log(toDoList.name)
+
+
+
