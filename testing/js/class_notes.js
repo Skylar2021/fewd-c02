@@ -8,8 +8,11 @@ class ClassName { // first letter of class name in upper Case
 
 class ChildClass extends ClassName { 
   //"extends" is keyword so that the method, getter, setter wll be inherited to the child class
-  constructor(variable1, variable2){
+  constructor(variable3){ 
+    // parameters in constructor can be different from parameters of super()
     super(variable1, variable2) // to call the constructor of the parent class
+    //can set a default parameter in super()
+    this._variable3 = variable3;
   }
 }
 

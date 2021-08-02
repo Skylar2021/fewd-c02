@@ -17,16 +17,15 @@ class Media {
   set isCheckedOut(input){
     return this._isCheckedOut = input;
   }
-  toggleCheckOutStatus(input) {
-    if (input === true) return this.isCheckedOut = false;
-    if (input === false) return this.isCheckedOut = true;
+  toggleCheckOutStatus() {
+    return this.isCheckedOut = !this.isCheckedOut;
   }
   getAverageRating() {
-    
     return this.ratings.reduce((n1, n2) => (n1 + n2)) / this.ratings.length;
   }
   addRating(input) {
-    (Math.min(input) >= 1 && Math.max(input) <= 5 ) ? this._ratings.push(input) : console.log('The rating range should be 1-5.')
+    let num = Number(input)
+    Math.min(num) >= 1 && Math.max(num) <= 5  ? this._ratings.push(num) : console.log('The rating range should be 1-5.')
   }
 }
 
@@ -84,8 +83,7 @@ class CD extends Media{
 }
 //16-19
 const historyOfEverything = new Book('A Short History of Nearly Everything', 'Bill Bryson', 544)
-historyOfEverything.toggleCheckOutStatus(true)
-console.log(historyOfEverything.isCheckedOut )
+historyOfEverything.toggleCheckOutStatus()
 historyOfEverything.addRating(4)
 historyOfEverything.addRating(5)
 historyOfEverything.addRating(5)
@@ -93,7 +91,7 @@ console.log('A Short History of Nearly Everything rating: ' + historyOfEverythin
 
 //20-24
 const speed = new Movie('Jan de Bont', 'Jan de Bont', 116)
-speed.toggleCheckOutStatus(true)
+speed.toggleCheckOutStatus()
 console.log(speed.isCheckedOut)
 speed.addRating(1)
 speed.addRating(1)
@@ -107,8 +105,7 @@ console.log('Random song from CD Ivana: ' + ivana.shuffle())
 class Catalog {
   constructor(name){
     this._name = name;
-    this._media = [];
-
+    this._media = [];    
   }
   get media(){
     return this._media;
@@ -123,5 +120,9 @@ catalog.addCatalog(speed)
 catalog.addCatalog(ivana)
 catalog.addCatalog(historyOfEverything)
 
-console.log(catalog.media)
+// console.log(catalog.media)
 
+console.log(ivana)
+ivana.toggleCheckOutStatus()
+
+console.log(catalog)
