@@ -4,8 +4,6 @@ for(let i in a.data) {
   console.log(`${i} : ${a.data[i]}`)
 }
 
-
-
 // let select = document.querySelector('div')
 // document.querySelector()
 // .innerHTML()
@@ -13,16 +11,18 @@ for(let i in a.data) {
 //   window.open("exit.html", "Thanks for Visiting!");
 // }
 
-// node.js version: Module.exports.a;
-// Module.exports.a = 1 (means let a = 1)
+// node.js version: 
+// module.exports.a;
+// module.exports.a = 1 (means let a = 1)
 // **export before declare**
+// for node.js(server side) import using require('')
+// const a = require('./corresponding_file_name')
 
-// for ES6(browser) import variable from './corresponding_file_name'
+// for ES6(browser) // ES6 modules are automatically strict-mode
+// export default variable = ...  // or at the end: export {variable1, variable2, function1}
+// import variable from './corresponding_file_name'
 // without default value -> {variable}
 // most library have default value
-
-// for node.js(server side)
-// const { a } = required('./corresponding_file_name')
 
 // const babel = require('babel-cli') // import npm package
 
