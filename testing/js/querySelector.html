@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .box{
+      height: 100px;
+      width: 100px;
+      background-color:black;
+     
+    }
+
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="box"></div>
+  <button>change color</button>
+  <script>
+    let i = 0
+    let colorList = ['#1234fa', 'blueviolet', 'goldenrod']
+    document.querySelector('button').addEventListener('click', () =>{
+      i++
+    document.querySelector('.box').style.backgroundColor = colorList[i % colorList.length]})
+  </script>
+</body>
+</html>

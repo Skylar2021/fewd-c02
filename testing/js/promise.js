@@ -46,3 +46,29 @@ const handleFailure = (rejectionReason) => {
 
 //.catch()
 prom.then(handleSuccess).catch(handleFailure)
+
+// different syntax that return same result 
+// 1.
+const examplePromise1 = new Promise((resolve, reject) => { reject('Uh-oh!') });
+const examplePromise2 = new Promise((resolve, reject) => { reject('Uh-oh!') });
+ 
+const onFulfill = value => {console.log(value)};
+const onReject = reason => {console.log(reason)};
+ 
+const promise1 = examplePromise1.then(onFulfill, onReject);
+ 
+const promise2 = examplePromise2.then(onFulfill).catch(onReject);
+
+// 2.
+let onFulfill = value => {console.log(value)};
+let onReject = reason => {console.log(reason)};
+ 
+const promise =  new Promise( (resolve, reject) => {
+  if (1==false) {
+    resolve('success value');
+  } else {
+    reject();
+  }
+});
+ 
+promise.then(onFulfill, onReject);
