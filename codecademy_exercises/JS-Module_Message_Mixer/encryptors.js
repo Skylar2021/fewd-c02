@@ -1,5 +1,5 @@
 // Declare and export the functions here.
-module.exports.caesarCipher = (str, amount = 0) => {
+const caesarCipher = (str, amount = 0) => {
   if (amount < 0) {
     return caesarCipher(str, amount + 26);
   }
@@ -19,7 +19,7 @@ module.exports.caesarCipher = (str, amount = 0) => {
   return output;
 };
 
-module.exports.symbolCipher = (str) => {
+const symbolCipher = (str) => {
   const symbols = {
     'i': '!',
     '!': 'i',
@@ -50,10 +50,12 @@ module.exports.symbolCipher = (str) => {
   return output;
 }
 
-module.exports.reverseCipher = (sentence) => {
+const reverseCipher = (sentence) => {
   let words = sentence.split(' ');
   for (let i = 0; i < words.length; i++) {
     words[i] = words[i].split('').reverse().join('');
   }
    return words.join(' ');
 };
+
+module.exports = { caesarCipher, symbolCipher, reverseCipher}
