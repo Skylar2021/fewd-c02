@@ -1,4 +1,3 @@
-const log = console.log
 // const arr = [['anson', 'yes'], ['candice', 'yes'], ['other', 'no']]
 // let randomPerson = arr[i]
 
@@ -7,13 +6,6 @@ const log = console.log
 //   candice: 'yes',
 //   other: 'no'
 // }
-
-let i = Math.floor(Math.random()*10);
-
-
-let respond = i >5 ? 'yes' : 'no';
-
-
 
 // const speakUp = (name) => {
   //  let respond = person.name    
@@ -28,22 +20,29 @@ const fail = (reject) => {
   console.log(reject)
 }
 
-const speakUp = (respond) => {
-  return new Promise((resolve, reject)=>{
-    console.log('Be my boy/girl friend!')
-    setTimeout(()=>{log('.')}, 250)
-    setTimeout(()=>{log('.')}, 500)
-    setTimeout(()=>{log('.')}, 1000)
-    setTimeout(()=>{log('.')}, 1500)
-    setTimeout(()=>{log('.')}, 2000)
-    setTimeout(()=>{log('.')}, 2500)
+const speakUp = () => {
+  let i = Math.floor(Math.random()*10);
+  let respond = i > 5 ? 'yes' : 'no';
+  return new Promise((resolve, reject) => {
     setTimeout( () => { 
-      if (respond === 'yes') {resolve('Yes~ We are couple now.')};
-      if (respond === 'no') {reject('No!You are in my friend zone.')};
-      }, 3000)    
+      if (respond === 'yes') {resolve('Yes! Be couple!')};
+      if (respond === 'no') {reject('No! We are friend.')};
+      }, 1500)    
     }
   )
 }
-  
-speakUp(respond).then(success).catch(fail)
 
+const speakUp2 = () => {
+  
+  return new Promise((resolve, reject) => {
+    setTimeout( () => { 
+      let i = Math.floor(Math.random()*10);
+      let respond = i > 5 ? 'Yes! Be couple!' : 'No! We are friend.';
+      resolve(respond)
+      }, 1500)    
+    }
+  )
+}
+speakUp2()
+
+module.exports = speakUp2
