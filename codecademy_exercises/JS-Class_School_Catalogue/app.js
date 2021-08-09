@@ -119,6 +119,7 @@ holy.calAverageTestScores()
 holy.schoolOverview = 'B'
 // console.log(holy)
 
+/*
 class SchoolCatalogue {
   constructor(type){
     this._schoolType = type === 'high' || type === 'primary' ? type : console.log('Please input high or primary.');
@@ -141,3 +142,54 @@ const highCatalogue = new SchoolCatalogue('high')
 highCatalogue.addCatalogue(alSmith)
 highCatalogue.addCatalogue(stJohn)
 console.log(highCatalogue)
+*/
+
+class SchoolCatalogue {
+  constructor(school){
+    this._priSch = [];
+    this._midSch = [];
+    this._highSch = [];
+
+    for (const item of school){
+      switch (school.level){
+        case 'primary':
+          return this.priSch.push(item);
+        case 'middle':
+          return this.midSch.push(item);
+        case 'high':
+          return this.highSch.push(item);
+      }
+    }
+  }
+  get priSch(){
+    return this._priSch
+  }
+  get midSch(){
+    return this._midSch
+  }
+  get highSch(){
+    return this._highSch
+  }
+}
+
+const schools = new SchoolCatalogue([
+  lorraineHansbury, 
+  hailey, 
+  alSmith, 
+  stJohn, 
+  holy
+])
+
+console.log(schools)
+// let school = [
+//   lorraineHansbury, 
+//   hailey, 
+//   alSmith, 
+//   stJohn, 
+//   holy
+// ]
+// for (const item of school){
+//   // console.log(item)
+//   // console.log(school.level)
+  
+// }

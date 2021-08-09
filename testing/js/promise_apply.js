@@ -25,8 +25,9 @@ const speakUp = () => {
   let respond = i > 5 ? 'yes' : 'no';
   return new Promise((resolve, reject) => {
     setTimeout( () => { 
-      if (respond === 'yes') {resolve('Yes! Be couple!')};
-      if (respond === 'no') {reject('No! We are friend.')};
+      if (respond === 'yes') {resolve('Yes! Be couple!')
+    }
+      else {reject('No! We are friend.')};
       }, 1500)    
     }
   )
@@ -43,6 +44,6 @@ const speakUp2 = () => {
     }
   )
 }
-speakUp2()
 
-module.exports = speakUp2
+
+module.exports = {speakUp, speakUp2}
