@@ -2,6 +2,7 @@
 const doorImage1 = document.querySelector('#door1')
 const doorImage2 = document.querySelector('#door2')
 const doorImage3 = document.querySelector('#door3')
+const startButton = document.querySelector('#start')
 const botDoorPath = 'https://content.codecademy.com/projects/chore-door/images/robot.svg'
 const beachDoorPath = 'https://content.codecademy.com/projects/chore-door/images/beach.svg'
 const spaceDoorPath = 'https://content.codecademy.com/projects/chore-door/images/space.svg'
@@ -11,17 +12,9 @@ const closedDoorPath = 'https://content.codecademy.com/projects/chore-door/image
 let openDoor1
 let openDoor2
 let openDoor3
-const startButton = document.querySelector('#start')
 let currentlyPlaying = true;
 
-const playDoor = (door) => {
-  numClosedDoors--;
-  if (numClosedDoors === 0){
-    gameOver('win')
-  } else if(isBot(door)){
-    gameOver()
-  }
-}
+
 doorImage1.onclick = ()=>{
   if ( !isClicked(doorImage1) && currentlyPlaying){
   doorImage1.src = openDoor1
@@ -42,7 +35,7 @@ doorImage3.onclick = ()=>{
 }
 
 const startRound = () =>{
-  if (currentlyPlaying === false){
+  
     doorImage1.src = closedDoorPath;
     doorImage2.src = closedDoorPath;
     doorImage3.src = closedDoorPath;
@@ -50,25 +43,40 @@ const startRound = () =>{
     startButton.innerHTML = 'Good Luck!'
     currentlyPlaying = true;
     randomChoreDoorGenerator()
-  }
+  
 }
-startButton.onclick = startRound
+startButton.onclick = () =>{
+  if(currentlyPlaying === false) startRound()
+}
 const gameOver = (status) => {
   if (status === 'win'){
     startButton.innerHTML = 'You win! Play again?'    
   } else {
     startButton.innerHTML = 'Game over! Play again?'    
   }
-  currentlyPlaying = false
+  return currentlyPlaying = false
 }
 const isBot = (door) => {
-  door.src === botDoorPath ? true : false ;
+  if(door.src === botDoorPath){
+    return true
+  } else {
+    return false
+  }
+  
 }
-const isClicked = door => {
+const isClicked = (door) => {
   if(door.src === closedDoorPath){
     return false
   } else {
     return true
+  }
+}
+const playDoor = (door) => {
+  numClosedDoors -= 1;
+  if (numClosedDoors === 0){
+    gameOver('win')
+  } else if(isBot(door)){
+    gameOver()
   }
 }
 
