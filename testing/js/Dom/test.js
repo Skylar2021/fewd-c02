@@ -1,3 +1,4 @@
+'use strict'
 const button = document.querySelector('#toggle-disappear')
 const main2Area = document.querySelector('#main2')
 
@@ -42,7 +43,7 @@ button.addEventListener('click', ()=>{
 
 // back quote
 
-
+// let arr = [obj, obj2]
 
 const obj = {
   type: 'Work',
