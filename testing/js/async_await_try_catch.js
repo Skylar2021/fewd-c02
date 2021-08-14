@@ -1,6 +1,7 @@
 // try catch syntax
 'use strict'
 //syntax
+/*
 async function name() {
 	try {
     // statement
@@ -9,17 +10,18 @@ async function name() {
 	console.log(err)
   	}
 }
-
-// trytry
+*/
+// apply
 let answer = require('./promise_apply')
-answer = answer.speakUp()
+
 
 async function said(){
 	try {
 		console.log('Yo! Be with me?')
-		console.log(`um...I...um...${await answer}`)
+		answer.thinking()
+		console.log(`I...um...${await answer.speakUp()}`)
 	} catch (err){
-		console.log(err)
+		console.log(await err)
 		console.log('Fine~ Try someone else!')
 	}
 }
