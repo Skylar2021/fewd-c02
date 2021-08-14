@@ -20,14 +20,23 @@ const fail = (reject) => {
   console.log(reject)
 }
 
+const thinking = () => {
+  let arr = new Array(20).fill('um...')
+  for (let i of arr){
+    console.log(i)
+  }
+}
+
 const speakUp = () => {
   let i = Math.floor(Math.random()*10);
   let respond = i > 5 ? 'yes' : 'no';
   return new Promise((resolve, reject) => {
     setTimeout( () => { 
-      if (respond === 'yes') {resolve('Yes! Be couple!')
+      if (respond === 'yes') {
+        resolve('Yes! Be couple!')
     }
-      else {reject('No! We are friend.')};
+      else {
+        reject('No! We are friend.')};
       }, 1500)    
     }
   )
@@ -38,12 +47,12 @@ const speakUp2 = () => {
   return new Promise((resolve, reject) => {
     setTimeout( () => { 
       let i = Math.floor(Math.random()*10);
-      let respond = i > 5 ? 'Yes! Be couple!' : 'No! We are friend.';
-      resolve(respond)
+      let respond = i > 5 ? resolve('Yes! Be couple!') : reject('No! We are friend.');
+      
       }, 1500)    
     }
   )
 }
 
 
-module.exports = {speakUp, speakUp2}
+module.exports = {speakUp, speakUp2, thinking}
