@@ -8,13 +8,21 @@ const pathCharacter = '*';
 const hatNum = 1;
 
 class Field {
-  constructor(){
-	  this.field
+  constructor(field){
+	  this.field = field
 
+		
+		
   }
+	static generateField(){
+		
+	}
   print(){
 
   }
+	static generateField(){
+
+	}
 }
 
 const myField = new Field([
