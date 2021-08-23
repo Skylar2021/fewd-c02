@@ -1,8 +1,8 @@
-process.stdin.setEncoding('utf8')
-process.stdin.on('data', function(chunk){
-  process.stdout.write('chunk:' +chunk.toString())
-})
+let arrValue = [10];
 
-process.stdout.on('end', function(){
-  process.stdout.write('end')
-})
+// assigning default value 5 and 7
+let [x = 5,  y = 7] = arrValue;
+
+console.log(x); // 10
+console.log(y); // 7
+console.log(arrValue)

@@ -1,4 +1,4 @@
-// Notes: getter, setter, Factory Function and object destructuring
+// Notes: getter, setter, Factory Function and destructuring(object, array)
 
 const person = {
   firstName: 'Wong',
@@ -47,3 +47,13 @@ firstTry.log() // log: This is how Factory Function is working.
 
 const {key2} = firstTry
 console.log('key2: ' + key2)
+
+// array destructuring
+let arrValue = [10];
+
+// assigning default value 5 and 7
+let [x = 5,  y = 7] = arrValue;
+
+console.log(x); // 10
+console.log(y); // 7
+console.log(arrValue)
