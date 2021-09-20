@@ -14,12 +14,17 @@ const keyReturn = (event) => {
 }
 
 // Write a named function with event handler properties
-onclick = (note) =>{
-  
+handleClick = (note) =>{
+  note.addEventListener('mousedown', (e)=>{
+    keyPlay(e)
+  })
+  note.addEventListener('mouseup', (e)=>{
+    keyReturn(e)
+  })
 }
 
 // Write a loop that runs the array elements through the function
-
+notes.forEach(note=>note.onclick = handleClick(note))
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
@@ -36,13 +41,45 @@ nextThree.hidden = true;
 startOver.hidden= true;
 
 // Write anonymous event handler property and function for the first progress button
-
+nextOne.onclick = ()=>{
+	nextOne.hidden = true;
+	nextTwo.hidden = false;
+	document.querySelector('#letter-note-five').innerHTML = 'D'
+	document.querySelector('#letter-note-six').innerHTML = 'C'
+}
 
 // Write anonymous event handler property and function for the second progress button
-
+nextTwo.onclick = ()=>{
+	nextTwo.hidden = true;
+	nextThree.hidden = false;
+	document.querySelector('#word-five').innerHTML = 'DEAR'
+	document.querySelector('#word-six').innerHTML = 'FRI-'
+	document.querySelector('#letter-note-three').innerHTML = 'G'
+	document.querySelector('#letter-note-four').innerHTML = 'E'
+	document.querySelector('#letter-note-five').innerHTML = 'C'
+	document.querySelector('#letter-note-six').innerHTML = 'B'
+	lastLyric.style.display= 'inline-block'
+}
 
 // Write anonymous event handler property and function for the third progress button
+nextThree.onclick = ()=>{
+	nextThree.hidden = true;
+	startOver.hidden = false;
+	document.querySelector('#word-one').innerHTML = 'HAP-'
+	document.querySelector('#word-two').innerHTML = 'PY'
+	document.querySelector('#word-three').innerHTML = 'BIRTH'
+	document.querySelector('#word-four').innerHTML = 'DAY'
+	document.querySelector('#word-five').innerHTML = 'TO'
+	document.querySelector('#word-six').innerHTML = 'YOU!'
+	document.querySelector('#letter-note-one').innerHTML = 'F'
+	document.querySelector('#letter-note-two').innerHTML = 'F'
+	document.querySelector('#letter-note-three').innerHTML = 'E'
+	document.querySelector('#letter-note-four').innerHTML = 'C'
+	document.querySelector('#letter-note-five').innerHTML = 'D'
+	document.querySelector('#letter-note-six').innerHTML = 'C'
+	lastLyric.style.display= 'none'
 
+}
 
 // This is the event handler property and function for the startOver button
 startOver.onclick = function() {
